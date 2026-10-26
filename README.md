@@ -28,6 +28,12 @@ The demo uses generated toy data only. Replace it with data you are allowed to u
 - Fit preprocessing steps on training data only. Use validation results for model selection; report the test result once for the chosen configuration.
 - Check the project's `src/health/` code and tests before adapting it to real data.
 
+## Domain workflow
+
+- The demo uses generated data. For local CSV analysis, run `uv run python scripts/train.py --data-csv PATH --target no_show`. The input must be authorized and de-identified; direct identifiers such as patient IDs, names, email, and phone are rejected.
+- Classification uses a deterministic stratified 60/20/20 split and reports train/validation log loss plus held-out test metrics. Wilson intervals, aggregate-only plotting, and a non-binding expected-capacity estimate are available in `src/health/`.
+- Outputs are educational aggregate analyses, not clinical advice or automated care decisions. No MHRS/e-Nabız data is included.
+
 ## Repository layout
 
 ```text

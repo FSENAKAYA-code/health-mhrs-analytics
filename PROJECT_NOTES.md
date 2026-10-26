@@ -1,5 +1,3 @@
 # Domain implementation notes
 
-An educational appointment analytics scaffold. It uses no real patient records and is not a clinical or care-allocation system.
-
-The shared baseline in `src/health/` is executable now. Domain-specific model implementations are planned work and must be evaluated using documented data splits.
+The baseline performs stratified no-show classification on synthetic or authorized de-identified records. Direct identifiers are rejected; Wilson intervals, aggregate plotting, and non-binding capacity estimates operate on aggregate values only. This is not a clinical system.
